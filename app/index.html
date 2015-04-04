@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" ng-app="DemoApp">
+<head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body ng-controller="HelloCtrl">
+<div class="hello-banner">
+    <h1>Hello {{name}}</h1>
+    <button class="btn btn-primary" ng-click="setName()">Click Me!</button>
+</div>
+</body>
+</html>
