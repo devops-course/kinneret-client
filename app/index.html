@@ -20,7 +20,7 @@
         </div>
         <h3>These are your existing tasks:</h3>
         <div class="tasks-list">
-            <div class="task-list-item" ng-repeat="task in tasks">{{task}}
+            <div class="task-list-item" ng-repeat="task in tasks track by $index">{{task}}
                 <button class="btn close" style="color: red" title="Delete Task!" ng-click="deleteTask($index)">&times;</button></div>
         </div>
 
