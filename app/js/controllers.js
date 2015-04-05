@@ -2,10 +2,7 @@ var myApp = angular.module('DemoApp', []);
 
 myApp.controller('HelloCtrl', function ($scope) {
 
-    $scope.name = 'stranger, please click the button below.';
+    $scope.tasks = ['Do something important', 'Another thing to do','Don\'t forget this'];
 
-    $scope.setName = function () {
-        $scope.name = 'World!';
-    }
 
 });
