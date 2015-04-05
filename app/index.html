@@ -16,11 +16,12 @@
 
         <div class="task-input">
             <input style="flex: auto 1 0; margin-right: 10px; padding-left: 10px" type="text" ng-model="newTaskText" placeholder="Enter a new task here..."/>
-            <button class="btn btn-primary btn-xs">ADD TASK</button>
+            <button class="btn btn-primary btn-xs" ng-click="addTask(newTaskText)">ADD TASK</button>
         </div>
         <h3>These are your existing tasks:</h3>
         <div class="tasks-list">
-            <div class="task-list-item" ng-repeat="task in tasks">{{task}}<button class="btn close" style="color: red" title="Delete Task!">&times;</button></div>
+            <div class="task-list-item" ng-repeat="task in tasks">{{task}}
+                <button class="btn close" style="color: red" title="Delete Task!" ng-click="deleteTask($index)">&times;</button></div>
         </div>
 
     </div>
