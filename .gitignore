@@ -3,3 +3,4 @@
 /app/*.iml
 /app/bower_components
 /test/*.iml
+/test_out
