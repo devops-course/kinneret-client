@@ -1,6 +1,6 @@
 var myApp = angular.module('DemoApp', []);
 
-myApp.controller('HelloCtrl', function ($scope) {
+myApp.controller('TaskListCtrl', function ($scope) {
 
     $scope.tasks = [];
 
