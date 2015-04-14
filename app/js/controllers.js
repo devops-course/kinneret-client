@@ -1,11 +1,20 @@
 var myApp = angular.module('DemoApp', []);
 
-myApp.controller('HelloCtrl', function ($scope) {
+myApp.controller('TaskListCtrl', function ($scope) {
 
-    $scope.name = 'stranger, please click the button below.';
+    $scope.tasks = [];
 
-    $scope.setName = function () {
-        $scope.name = 'World!';
-    }
+    $scope.addTask = function (newTaskText) {
+        $scope.tasks.push(newTaskText);
+        $scope.clearTaskText();
+    };
+
+    $scope.clearTaskText = function () {
+        $scope.newTaskText = '';
+    };
+
+    $scope.deleteTask = function (index) {
+        $scope.tasks.splice(index, 1);
+    };
 
 });

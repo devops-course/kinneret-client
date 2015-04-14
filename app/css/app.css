@@ -1,9 +1,31 @@
-.hello-banner {
+.tasks-bg {
+    display: flex;
+    padding: 20px;
+    align-items: stretch;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: pink;
+    justify-content: center;
+}
+.tasks-main {
     display: flex;
     flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    width: 700px;
+}
+.task-input {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    height: 100%;
-    position: absolute;
-    width: 100%;
     justify-content: center;
+}
+.tasks-list {
+    display: flex;
+    flex-direction: column;
+}
+.task-list-item{
+    margin-top: 10px;
+    border-bottom: 1px solid lightgray;
 }

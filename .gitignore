@@ -2,3 +2,4 @@
 /node_modules
 /app/*.iml
 /app/bower_components
+/test/*.iml
