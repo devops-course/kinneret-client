@@ -15,7 +15,7 @@
     "postinstall": "bower install",
 
     "prestart": "npm install",
-    "start": "http-server -a 0.0.0.0 -p 8000 --proxy http://google.com/?q=",
+    "start": "http-server -a 0.0.0.0 -p 8000 --proxy http://localhost:9000",
 
     "pretest": "npm install",
     "test": "node node_modules/karma/bin/karma start test/karma.conf.js",

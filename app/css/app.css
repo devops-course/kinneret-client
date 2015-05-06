@@ -29,3 +29,9 @@
     margin-top: 10px;
     border-bottom: 1px solid lightgray;
 }
+button.close {
+    color: red;
+}
+button.close:disabled {
+    color: lightgray;
+}
