@@ -1,7 +1,0 @@
-test:
-  override:
-    - npm run test-single-run 
-    - wget https://circle-artifacts.com/gh/devops-course/kinneret-server/4/artifacts/0/home/ubuntu/kinneret-server/target/kinneret-server-1.0-SNAPSHOT.jar
-    - java -jar kinneret-server-1.0-SNAPSHOT.jar
-    - npm run protractor
-   
