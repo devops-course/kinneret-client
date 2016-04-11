@@ -1,4 +1,4 @@
 test:
   override:
-    - npm test-single-run
+    - npm run test-single-run
    
