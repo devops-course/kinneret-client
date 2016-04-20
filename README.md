@@ -1,3 +1,5 @@
+[![Circle CI](https://circleci.com/gh/devops-course/kinneret-client.svg?style=svg)](https://circleci.com/gh/devops-course/kinneret-client)
+
 ![alt text](https://avatars0.githubusercontent.com/u/139426?v=3&s=400 "AngularJS FTW!")
 
 # AngularJS Client
