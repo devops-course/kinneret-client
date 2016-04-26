@@ -1,5 +1,6 @@
-[![Circle CI](https://circleci.com/gh/devops-course/kinneret-client.svg?style=svg)](https://circleci.com/gh/devops-course/kinneret-client)
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/bd44de0208974b9a87b58b3c8164032c)](https://www.codacy.com/app/devops-course/kinneret-client)
+[![Circle CI](https://circleci.com/gh/boris-org/kinneret-client.svg?style=svg)](https://circleci.com/gh/boris-org/kinneret-client)
+[![codecov.io](https://codecov.io/gh/boris-org/kinneret-client/coverage.svg?branch=master)](https://codecov.io/github/boris-org/kinneret-client?branch=master)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/bd44de0208974b9a87b58b3c8164032c)](https://www.codacy.com/app/boris-org/kinneret-client)
 
 ![alt text](https://avatars0.githubusercontent.com/u/139426?v=3&s=400 "AngularJS FTW!")
 
