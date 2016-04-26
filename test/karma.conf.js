@@ -18,7 +18,7 @@ module.exports = function(config){
     frameworks: ['jasmine'],
 
     browsers : ['PhantomJS'],
-
+    reporters: ['progress', 'coverage'],
     preprocessors: {
       'src/**/*.js': ['coverage']
     },
@@ -37,7 +37,7 @@ module.exports = function(config){
     },
 
     coverageReporter: {
-      type : 'xml',
+      type : 'html',
       dir : 'test_out/'
     }
 
