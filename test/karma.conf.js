@@ -19,6 +19,10 @@ module.exports = function(config){
 
     browsers : ['PhantomJS'],
 
+    preprocessors: {
+      'src/**/*.js': ['coverage']
+    },
+
     plugins : [
             'karma-chrome-launcher',
             'karma-firefox-launcher',
@@ -29,7 +33,13 @@ module.exports = function(config){
     junitReporter : {
       outputFile: 'test_out/unit.xml',
       suite: 'unit'
+    },
+
+    coverageReporter: {
+      type : 'xml',
+      dir : 'test_out/'
     }
+
 
   });
 };
