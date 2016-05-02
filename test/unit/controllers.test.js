@@ -31,10 +31,21 @@ describe('TaskList Controller', function () {
     });
 
     it('should add a new task', function () {
-        httpBackend.expectPOST('/tasks', {'description': 'hello world'}).respond(200);
-        httpBackend.expectGET('/tasks').respond(200, [{id: '999', description: 'hello world'}]);
+        
+        // define the mock service behavior for the POST request
+        httpBackend.expectPOST( '/tasks', 
+                                {'description': 'hello world'}).respond(200);
+        
+        // define the mock service behavior for the GET request
+        httpBackend.expectGET('/tasks').respond(200, 
+                                                [{ id: '999', 
+                                                   description: 'hello world'}]);
+        
+        // perform the action
         scope.addTask('hello world');
         flushAndApply();
+        
+        // verify resulting state of the scope
         expect(scope.tasks.length).toBe(1);
         expect(scope.tasks[0].description).toEqual('hello world');
         expect(scope.tasks[0].id).toEqual('999');
