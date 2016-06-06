@@ -1,30 +1,41 @@
 <!doctype html>
 <html lang="en" ng-app="DemoApp">
+
 <head>
     <meta charset="utf-8">
     <title>Tasks</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
-    <link rel="icon" type="image/png" href="img/favicon.png"/>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
     <script src="bower_components/angular/angular.js"></script>
     <script src="js/controllers.js"></script>
-</head>
-<body ng-controller="TaskListCtrl">
-<div class="tasks-bg">
-    <div class="tasks-main">
-        <h1 style="align-self: center">My Task List</h1>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        <div class="task-input">
+        ga('create', 'UA-78775279-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</head>
+
+<body ng-controller="TaskListCtrl">
+    <div class="tasks-bg">
+        <div class="tasks-main">
+            <h1 style="align-self: center">My Task List</h1>
+
+            <div class="task-input">
             <input style="flex: auto 1 0; margin-right: 10px; padding-left: 10px" type="text" ng-model="newTaskText" placeholder="Enter a new task here..."/>
             <button class="btn btn-primary btn-xs" ng-disabled="busy" ng-click="addTask(newTaskText)">ADD TASK</button>
-        </div>
-        <h3>These are your existing tasks:</h3>
-        <div class="tasks-list">
-            <div class="task-list-item" ng-repeat="task in tasks track by $index" title="task #{{task.id}}">{{task.description}}
-                <button ng-disabled="busy" class="btn close" title="Delete Task!" ng-click="deleteTask(task)">&times;</button></div>
-        </div>
+            </div>
+            <h3>These are your existing tasks:</h3>
+            <div class="tasks-list">
+                <div class="task-list-item" ng-repeat="task in tasks track by $index" title="task #{{task.id}}">{{task.description}}
+                    <button ng-disabled="busy" class="btn close" title="Delete Task!" ng-click="deleteTask(task)">&times;</button></div>
+            </div>
 
+        </div>
     </div>
-</div>
 </body>
 </html>

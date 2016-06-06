@@ -15,9 +15,10 @@ myApp.controller('TaskListCtrl', function ($scope, $http) {
     refresh();
 
     $scope.addTask = function (newTaskText) {
-        //$scope.tasks.push(newTaskText);
+        // $scope.tasks.push(newTaskText);
         $scope.busy = true;
         $http.post('/tasks', {description: newTaskText}).success(function () {
+            ga('send', 'event', 'task', 'added');
             refresh();
         })
         $scope.clearTaskText();
@@ -31,6 +32,7 @@ myApp.controller('TaskListCtrl', function ($scope, $http) {
         //$scope.tasks.splice(index, 1);
         $scope.busy = true;
         $http.delete('/tasks/' + task.id).success(function () {
+            ga('send', 'event', 'task', 'removed');
             refresh();
         });
     };
